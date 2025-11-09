@@ -1,40 +1,67 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { getContactAPI } from '../services/allAPI'
+import { deleteContactAPI, getContactAPI } from '../services/allAPI'
+import Edit from './Edit'
 
 
 function preview() {
 
 
-const {id} = useParams()
-// console.log(id);
 
-const [contact,setContact]= useState({})
+  const { idd } = useParams()
+  // console.log(id);
 
-useEffect(()=>{
-getContactDetails()
-},[])
+  const [contact, setContact] = useState([])
 
-const getContactDetails = async ()=>{
-  const result = await getContactAPI (id)
-  // console.log(result);
-  if (result.status==200) {
-    setContact(result.data)
-    
+  useEffect(() => {
+    getContactDetails()
+  }, [])
+
+  const getContactDetails = async () => {
+    const result = await getContactAPI(idd)
+    // console.log(result);
+    if (result.status == 200) {
+      setContact(result.data)
+
+    }
+
   }
-  
+  console.log(contact);
+
+// dltbutton
+const deleteContactDetails = async (id) => {
+  try {
+    const results = await deleteContactAPI(id)
+    console.log(results)
+    if (results.status === 200) {
+      setContact(Contacts => Contacts.filter(item => item.id !== id))
+    }
+  } catch (err) {
+    console.log(err)
+  }
 }
-console.log(contact);
+
 
 
   return (
     <div className='text-center' >
-<h2> Contact details</h2>
-<h4>{contact?.contactname}</h4>
-<h4>{contact?.email}</h4>
-<h4>{contact?.phonenumber}</h4>
-<h4>{contact?.address}</h4>
+
+
+      <div className="container mt-4">
+        <h2>Contact List</h2>
+        <ul className="list-group">
+          {contact.map((c) => (
+            <li key={c.id} className="list-group-item">
+              <strong>{c.contactname}</strong> - {c.email} - {c.phonenumber} - {c.address} <button onClick={() => deleteContactDetails(c.id)} className='btn btn-primary' >
+                delete
+              </button>
+              <Edit/>
+            </li>
+          ))}
+        </ul>
+      </div>
+
 
     </div>
   )

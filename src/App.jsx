@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/contact' element={<ContactGenerator />} />
-        <Route path='/preview/:id/view' element={<Preview />}  />
+        <Route path='/preview' element={<Preview />}  />
 
       </Routes>
     </>

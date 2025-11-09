@@ -29,10 +29,10 @@ function ContactGenerator() {
         console.log(result);
         if (result.status == 201) {
           alert("contact added successfully")
-          const { id } = result.data
-          naviagte(`/preview/${id}/view`)
+          // const { idd } = result.data
+          naviagte("/preview")
         }
-
+ 
       } catch (error) {
         console.log(error);
 
