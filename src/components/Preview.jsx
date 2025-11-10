@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 import { deleteContactAPI, getContactAPI } from '../services/allAPI'
 import Edit from './Edit'
 
@@ -9,7 +9,7 @@ function preview() {
 
 
 
-  const { idd } = useParams()
+  // const { idd } = useParams()
   // console.log(id);
 
   const [contact, setContact] = useState([])
@@ -19,7 +19,7 @@ function preview() {
   }, [])
 
   const getContactDetails = async () => {
-    const result = await getContactAPI(idd)
+    const result = await getContactAPI()
     // console.log(result);
     if (result.status == 200) {
       setContact(result.data)
@@ -27,7 +27,7 @@ function preview() {
     }
 
   }
-  console.log(contact);
+  // console.log(contact);
 
 // dltbutton
 const deleteContactDetails = async (id) => {
@@ -51,15 +51,15 @@ const deleteContactDetails = async (id) => {
       <div className="container mt-4">
         <h2>Contact List</h2>
         <ul className="list-group">
-          {contact.map((c) => (
-            <li key={c.id} className="list-group-item">
-              <strong>{c.contactname}</strong> - {c.email} - {c.phonenumber} - {c.address} <button onClick={() => deleteContactDetails(c.id)} className='btn btn-primary' >
+          {contact.map((contact) => (
+            <li key={contact?.id} className="list-group-item"> 
+              <strong>{contact?.contactname}</strong> - {contact?.email} - {contact?.phonenumber} - {contact?.address} <button onClick={() => deleteContactDetails(contact.id)} className='btn btn-primary' >
                 delete
               </button>
-              <Edit/>
-            </li>
-          ))}
-        </ul>
+              <Edit  contactDetails={contact}  setContactDetails={setContact} />
+            </li> 
+           ))}
+     </ul>
       </div>
 
 
