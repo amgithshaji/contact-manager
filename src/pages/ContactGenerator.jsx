@@ -19,7 +19,7 @@ function ContactGenerator() {
 
   const handleAddcontact = async () => {
     const { contactname, email, phonenumber, address } = contactDetails
-    if (!contactname && !email && !phonenumber && !address) {
+    if (!contactname || !email || !phonenumber || !address) {
       alert("please fill the form completely...")
     } else {
       // api
