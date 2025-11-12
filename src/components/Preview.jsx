@@ -45,25 +45,27 @@ const deleteContactDetails = async (id) => {
 
 
   return (
-    <div className='text-center' >
-
-
-      <div className="container mt-4">
-        <h2>Contact List</h2>
-        <ul className="list-group">
-          {contact.map((contact) => (
-            <li key={contact?.id} className="list-group-item"> 
-              <strong>{contact?.contactname}</strong> - {contact?.email} - {contact?.phonenumber} - {contact?.address} <button onClick={() => deleteContactDetails(contact.id)} className='btn btn-primary' >
-                delete
-              </button>
-              <Edit  contactDetails={contact}  setContactDetails={setContact} />
-            </li> 
-           ))}
-     </ul>
+ <section style={{backgroundColor:"#e9e9e9ff", paddingTop: "120px",}} >
+      <div className='text-center' >
+  
+  
+        <div className="container mt-4">
+          <h2>Contact List</h2>
+          <ul className="list-group rounded-5 ">
+            {contact.map((contact) => (
+              <li key={contact?.id} className="list-group-item"> 
+                <strong> {contact?.contactname}</strong> - {contact?.email} - {contact?.phonenumber} - {contact?.address} <button onClick={() => deleteContactDetails(contact.id)} className='btn btn-primary' >
+                  delete
+                </button>
+                <Edit  contactDetails={contact}  setContactDetails={setContact} />
+              </li> 
+             ))}
+       </ul>
+        </div>
+  
+  
       </div>
-
-
-    </div>
+ </section>
   )
 }
 

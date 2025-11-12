@@ -7,7 +7,7 @@ function Header() {
  const items = [
     {
       label: "About",
-      bgColor: "#0D0716",
+      bgColor: "#000000ff",
       textColor: "#fff",
       links: [
         { label: "Company", ariaLabel: "About Company" },
@@ -15,8 +15,8 @@ function Header() {
       ]
     },
     {
-      label: "Projects", 
-      bgColor: "#170D27",
+      label: "Usage", 
+      bgColor: "#000000ff",
       textColor: "#fff",
       links: [
         { label: "Featured", ariaLabel: "Featured Projects" },
@@ -25,7 +25,7 @@ function Header() {
     },
     {
       label: "Contact",
-      bgColor: "#271E37", 
+      bgColor: "#000000ff", 
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email us" },
