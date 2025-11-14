@@ -11,8 +11,8 @@ function Footer() {
   <div className='row' >
     <div className='col-md-1' ></div>
  <div className='col-md-10' >
-    <div class="card w-100 mb-3 rounded-5 shadow p-4 border-0">
-    <div class="card-body">
+    <div className="card w-100 mb-3 rounded-5 shadow p-4 border-0">
+    <div className="card-body">
     <div className='row' >
       <div className='col-md-5' >
         <img style={{width:"30%" }} src="/footerlogo.png" alt="no img" />

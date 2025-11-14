@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import { updateContactAPI } from '../services/allAPI';
+import { MdModeEditOutline } from "react-icons/md";
 
 const style = {
   position: 'absolute',
@@ -52,10 +53,11 @@ function Edit({ contactDetails, setContactDetails }) {
 
   return (
     <div>
-      <button onClick={handleOpen} className='btn btn-success mx-2'>Edit</button>
+      <MdModeEditOutline className='fs-4' onClick={handleOpen} />
+
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
-          <Typography variant="h6" component="h2">
+          <Typography sx={{textAlign: "center" }} variant="h6" component="h2">
             Edit Contact Details
           </Typography>
 
@@ -64,7 +66,7 @@ function Edit({ contactDetails, setContactDetails }) {
             <TextField value={editedContact.email} onChange={e => setEditedContact({ ...editedContact, email: e.target.value })} fullWidth label="Email"/>
             <TextField value={editedContact.phonenumber} onChange={e => setEditedContact({ ...editedContact, phonenumber: e.target.value })} fullWidth label="Phone Number"/>
             <TextField value={editedContact.address} onChange={e => setEditedContact({ ...editedContact, address: e.target.value })} fullWidth label="Address"/>
-            <button onClick={updatebtn} className='btn btn-primary mt-3'>Update</button>
+            <button onClick={updatebtn} className='btn btn-dark mt-3 rounded-5'>Update</button>
           </Box>
         </Box>
       </Modal>
