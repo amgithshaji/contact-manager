@@ -38,9 +38,11 @@ function preview() {
 const deleteContactDetails = async (id) => {
   try {
     const results = await deleteContactAPI(id)
+    
     console.log(results)
     if (results.status === 200) {
-      setContact(Contacts => Contacts.filter(item => item.id !== id))
+      alert("successfully contact deleted")
+      getContactDetails()
     }
   } catch (err) {
     console.log(err)
@@ -78,7 +80,7 @@ const deleteContactDetails = async (id) => {
 </div> 
   <div className=' d-flex align-items-center justify-content-center ' >
       <  MdDelete className='fs-3 me-5 text-danger ' onClick={()=>deleteContactDetails(item.id)} />
-       <Edit contactDetails={item} setContactDetails={setContact} />
+       <Edit getContactDetails={getContactDetails} contactDetails={item} setContactDetails={setContact} />
    </div>
   </div>
   <div className="card-footer text-body-secondary">

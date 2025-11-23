@@ -61,7 +61,7 @@ function ContactGenerator() {
           </Box>
         </Box>
   
-        <div onClick={handleAddcontact} style={{ marginLeft: "48%",width:"90px"}} className='btn btn-dark text-white rounded-5 ' >
+        <div onClick={handleAddcontact} style={{ marginLeft: "47%",width:"90px"}} className='btn btn-dark text-white rounded-5 ' >
           Save
         </div>
       </div>

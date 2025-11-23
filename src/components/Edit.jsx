@@ -18,13 +18,11 @@ const style = {
   p: 4,
 };
 
-function Edit({ contactDetails, setContactDetails }) {
+function Edit({ contactDetails, setContactDetails,getContactDetails }) {
   const [open, setOpen] = useState(false);
   const [editedContact, setEditedContact] = useState({ ...contactDetails }); 
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  const handleOpen = () => {setOpen(true); };
   const handleClose = () => setOpen(false);
 
   const updatebtn = async () => {
@@ -39,11 +37,12 @@ function Edit({ contactDetails, setContactDetails }) {
       const result = await updateContactAPI(id, editedContact);
       if (result.status === 200) {
         alert("Contact updated successfully!");
-        setContactDetails(prevContacts =>
-          prevContacts.map(item =>
-            item.id == id ? result.data : item
-          )
-        );
+        // setContactDetails(prevContacts =>
+        //   prevContacts.map(item =>
+        //     item.id == id ? result.data : item
+        //   )
+        // );
+        getContactDetails()
         handleClose();
       }
     } catch (err) {
