@@ -18,7 +18,7 @@ function App() {
         <Route path='/contact' element={<ContactGenerator />} />
         <Route path='/preview' element={<Preview />}  />
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   )
 }

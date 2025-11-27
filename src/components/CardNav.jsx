@@ -11,7 +11,7 @@ const CardNav = ({
   items,
   className = '',
   ease = 'power3.out',
-  baseColor = '#fff',
+  baseColor = '#4d4d4dff',
   menuColor,
   buttonBgColor,
   buttonTextColor
@@ -136,7 +136,9 @@ const CardNav = ({
 
   return (
     <div className={`card-nav-container ${className}`}>
-      <nav ref={navRef} className={`card-nav ${isExpanded ? 'open' : ''}`} style={{ backgroundColor: baseColor }}>
+      <nav ref={navRef}
+       className={`card-nav ${isExpanded ? 'open' : ''}`} 
+       >
         <div className="card-nav-top">
           <div
             className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''}`}

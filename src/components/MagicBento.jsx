@@ -2,47 +2,47 @@ import { useRef, useEffect, useCallback, useState } from 'react';
 import { gsap } from 'gsap';
 import './Reactbits.css';
 
-const DEFAULT_PARTICLE_COUNT = 12;
+const DEFAULT_PARTICLE_COUNT = 22;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
-const DEFAULT_GLOW_COLOR = '132, 0, 255';
+const DEFAULT_GLOW_COLOR = '225, 225, 255';
 const MOBILE_BREAKPOINT = 768;
 
 const cardData = [
   {
-    color: '#060010',
-    title: 'Analytics',
-    description: 'Track user behavior',
-    label: 'Insights'
+    color: '#000000ff',
+    title: 'Organized Contacts',
+    description: 'Manage your connections effortlessly',
+    label: '100%'
   },
   {
-    color: '#060010',
-    title: 'Dashboard',
-    description: 'Centralized data view',
-    label: 'Overview'
+    color: '#000000ff',
+    title: 'Smart Sync',
+    description: 'Your contacts stay updated',
+    label: '24/7'
   },
   {
-    color: '#060010',
-    title: 'Collaboration',
-    description: 'Work together seamlessly',
-    label: 'Teamwork'
+    color: '#000000ff',
+    title: 'Fast. Minimal. Productive.',
+    description: 'Every action takes fewer steps',
+    label: 'Flow'
   },
   {
-    color: '#060010',
-    title: 'Automation',
-    description: 'Streamline workflows',
-    label: 'Efficiency'
+    color: '#000000ff',
+    title: 'Optimized for speed',
+    description: 'Smooth. Responsive. Reliable.',
+    label: 'Faster'
   },
   {
-    color: '#060010',
-    title: 'Integration',
-    description: 'Connect favorite tools',
-    label: 'Connectivity'
+    color: '#000000ff',
+    title: 'Reliable',
+    description: 'Your contacts are always available',
+    label: '99%'
   },
   {
-    color: '#060010',
-    title: 'Security',
+    color: '#000000ff',
+    title: 'Contacts Supported',
     description: 'Enterprise-grade protection',
-    label: 'Protection'
+    label: '500+'
   }
 ];
 

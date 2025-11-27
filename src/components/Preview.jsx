@@ -8,6 +8,10 @@ import { IoMdPerson } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaAddressBook } from "react-icons/fa6";
+import Footer from '../components/Footer'
+import Background from './Background';
+
+
 
 
 function preview() {
@@ -52,21 +56,24 @@ const deleteContactDetails = async (id) => {
 
 
   return (
- <section style={{backgroundColor:"#e9e9e9ff", paddingTop: "120px",paddingBottom:"10px"}} >
+ <section style={{  backgroundColor:"#000000ff", paddingTop: "120px",paddingBottom:"10px",height:"auto"}} >
+  <Background/>
       <div className='text-center' >
   
   
-        <div className="container mt-4 ">
+        <div  className="container mt-4 ">
           <h2>Contact List</h2>
      {contact.map((item)=>( 
-      <div key={item.id} className="card text-center rounded-5 p-1 shadow m-4">
-  <div className="card-header ">
+      <div style={{  color: "#D0D0D0",
+    textShadow: "0px 0px 10px rgba(255,255,255,0.3)"}} key={item.id} className="card glass-card text-center rounded-5 p-1 shadow m-4 ">
+  <div className="card-header  ">
 <div className='d-flex align-items-center justify-content-center'>
    <IoMdPerson className='fs-3 me-2 mb-2'  /> <h5 className=' fw-bold' > {item?.contactname}</h5>  
   
-</div>  </div>
+</div> 
+ </div>
   <div className="card-body">
-<div className='d-flex align-items-center justify-content-center'>
+<div className='d-flex align-items-center justify-content-center '>
       <FaPhoneAlt className='me-2 mb-2' />    <h6 className="card-title">{item?.phonenumber}</h6>
   
 </div>
@@ -91,6 +98,7 @@ const deleteContactDetails = async (id) => {
   
   
       </div>
+      <Footer/>
  </section>
   )
 }
