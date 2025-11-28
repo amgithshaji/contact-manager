@@ -8,9 +8,9 @@
 .head-margin {
 padding-top:-50px;
 }
-body{ 
+/* body{ 
       overflow-x: hidden;
-}
+} */
 /* .font-scroll{
         font-family: "Archivo Black", sans-serif;
 
@@ -45,4 +45,9 @@ body{
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
