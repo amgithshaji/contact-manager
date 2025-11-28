@@ -6,7 +6,7 @@ function Cards() {
     <div style={{ paddingLeft: "6rem",paddingRight: "6rem",marginBottom:"100px"}}  className='row g-1 d-flex justify-content-center align-items-center ' >
 <div style={{marginBottom:"100px"}} className='col-12 col-md-3  d-flex justify-content-center'>
   <TiltedCard
-    imageSrc="https://i.pinimg.com/1200x/2b/5c/c0/2b5cc004fdaa0749db2dbc1ea253e7aa.jpg"
+    imageSrc="card1.jpg"
     altText=""
     captionText="CONNECT"
     containerHeight="300px"
@@ -27,7 +27,7 @@ function Cards() {
 </div>
 <div style={{marginBottom:"100px"}}   className='col-12 col-md-3  d-flex justify-content-center'>
   <TiltedCard
-    imageSrc="https://i.pinimg.com/736x/d0/80/34/d08034d8194ba3c53271b3c6560be7c3.jpg"
+    imageSrc="card2.jpg"
     altText="Kendrick Lamar - GNX Album Cover"
     captionText="CONNECT"
     containerHeight="300px"
@@ -48,7 +48,7 @@ function Cards() {
 </div>
 <div style={{marginBottom:"100px"}}  className='col-12 col-md-3 d-flex justify-content-center'>
   <TiltedCard
-    imageSrc="https://i.pinimg.com/1200x/b9/2c/db/b92cdb55394a607846a951de8fe27f3e.jpg"
+    imageSrc="/card3.jpg"
     altText="Kendrick Lamar - GNX Album Cover"
     captionText="CONNECT"
     containerHeight="300px"
@@ -69,7 +69,7 @@ function Cards() {
 </div>
 <div style={{marginBottom:"100px"}}  className='col-12 col-md-3  d-flex justify-content-center'>
   <TiltedCard
-    imageSrc="https://i.pinimg.com/736x/0b/c6/41/0bc641cc9ac13a101e5411eb4cdb2648.jpg"
+    imageSrc="card4.jpg"
     altText="Kendrick Lamar - GNX Album Cover"
     captionText="CONNECT"
     containerHeight="300px"
