@@ -11,7 +11,7 @@ function ScrollEffect() {
 >
 <div >
   
-  <h1 className='fw-bolder ' style={{ fontSize: "clamp(20px, 7vw, 70px)" ,color:"#424242ff"}}>
+  <h1 className='fw-bolder ' style={{ fontSize: "clamp(20px, 7vw, 70px)" ,color:"#bb32ffff"}}>
     How Our Platform <br />
     Makes Your Work Easier.
   </h1>
