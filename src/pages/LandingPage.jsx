@@ -29,11 +29,11 @@ function LandingPage() {
 
             {/* <Background/> */}
     <div style={{position: "relative", zIndex: 1  }} className="card-body   ">
-        <h3 className="head-margin  fw-bolder "  style={{fontSize: "clamp(32px, 6vw, 70px)",   color: "#D0D0D0",
-    textShadow: "0px 0px 10px rgba(255,255,255,0.3)"}} ><span className='fw-bolder'>Contact Manager </span><br />
+        <h3 className="head-margin   "  style={{fontSize: "clamp(42px, 6vw, 80px)",   color: "#D0D0D0",
+    }} ><span className='fw-bolder'>Contact Manager </span><br />
             <span className='fw-bolder' >Store. Manage.<span className='fw-bolder'  style={{backgroundColor: "#e9e9e9ff",color: "white",border:"2px solid black",borderRadius: "35px",padding: "6px 12px",marginLeft: "8px",display: "inline-block"}} ><TextRotating/></span> <br/> Your contacts</span>
            </h3>
-           <h6 style={{fontSize:"17px"}} className='mt-4 text-white' >Your personal contact assistant — organized, responsive, and secure.</h6>
+           <h6 style={{fontSize:"17px"}} className='mt-4 text-white fw-light' >Your personal contact assistant — organized, responsive, and secure.</h6>
       
       <Link to={'contact'} style={{marginTop:""}} className='btn btn-dark text-white mt-4 rounded-5 ' > Get Started — Its Free</Link>
     <Link to={'/preview'}>

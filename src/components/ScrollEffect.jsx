@@ -9,9 +9,9 @@ function ScrollEffect() {
   scrollEnd='bottom bottom-=40%'
   stagger={0.03}
 >
-<div>
+<div >
   
-  <h1 className='fw-bolder' style={{ fontSize: "clamp(18px, 6vw, 70px)" ,color:"#424242ff"}}>
+  <h1 className='fw-bolder ' style={{ fontSize: "clamp(20px, 7vw, 70px)" ,color:"#424242ff"}}>
     How Our Platform <br />
     Makes Your Work Easier.
   </h1>
