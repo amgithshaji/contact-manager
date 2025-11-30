@@ -8,7 +8,7 @@ function Background() {
         inset: 0,
         width: "100%",
         height: "120%",
-        zIndex: 0,           // <-- change to 0
+        zIndex: 0,           
         overflow: "hidden",
         pointerEvents: "none",
       }}

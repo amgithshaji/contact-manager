@@ -37,7 +37,7 @@ function Header() {
   ];
 
   return (
-      <CardNav
+      <CardNav 
       logo={logo}
       logoAlt="Company Logo"
       items={items}
