@@ -28,6 +28,8 @@ function Footer() {
               <div className='col-md-2  ' >
                 <h6 style={{ lineHeight: "50px", color: "gray" }} className=' ms-5 fw-bold ' >Features</h6>
                 <div className='mt-3 text-dark' >
+                                    <Link to={'/'} className='text-decoration-none' >  <p style={{ color: "gray" }} className='text-center '>Home</p></Link>
+
                   <Link to={'/contact'} className='text-decoration-none' >  <p style={{ color: "gray" }} className='text-center '>Add Contacts</p></Link>
                   <Link to={'/preview'} className='text-decoration-none'>
                     <p style={{ color: "gray" }} className='text-center '>Manage Contacts</p>
